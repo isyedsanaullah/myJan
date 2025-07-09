@@ -1,0 +1,832 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+
+    <title>Happy Birthday Hadia - From Sanny</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+
+    <style>
+    body {
+        margin: 0;
+        padding: 0;
+        font-family: 'Montserrat', sans-serif;
+        background: linear-gradient(-45deg, #3f0d12, #a71d31, #3a1c71, #d76d77);
+        background-size: 400% 400%;
+        animation: gradient 15s ease infinite;
+        color: white;
+        overflow-x: hidden;
+        min-height: 100vh;
+        user-select: none;
+    }
+
+    @keyframes gradient {
+        0% { background-position: 0% 50%; }
+        50% { background-position: 100% 50%; }
+        100% { background-position: 0% 50%; }
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 0 auto;
+        padding: 20px;
+        text-align: center;
+    }
+
+    h1, h2, h3 {
+        font-family: 'Dancing Script', cursive;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    }
+
+    h1 {
+        font-size: 3rem;
+        margin-bottom: 0;
+        animation: pulse 2s infinite;
+    }
+
+    @media (min-width: 768px) {
+        h1 { font-size: 4rem; }
+    }
+
+    @keyframes pulse {
+        0% { transform: scale(1); }
+        50% { transform: scale(1.05); text-shadow: 0 0 15px #a71d31; }
+        100% { transform: scale(1); }
+    }
+
+    .countdown {
+        display: flex;
+        justify-content: center;
+        gap: 10px;
+        margin: 30px 0;
+        flex-wrap: wrap;
+    }
+
+    @media (min-width: 768px) {
+        .countdown { gap: 20px; }
+    }
+
+    .countdown-item {
+        background: rgba(63, 13, 18, 0.3);
+        border-radius: 10px;
+        padding: 15px;
+        min-width: 70px;
+        backdrop-filter: blur(5px);
+        animation: float 3s ease-in-out infinite;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    @media (min-width: 768px) {
+        .countdown-item {
+            padding: 20px;
+            min-width: 80px;
+        }
+    }
+
+    @keyframes float {
+        0% { transform: translateY(0px); }
+        50% { transform: translateY(-10px); }
+        100% { transform: translateY(0px); }
+    }
+
+    .countdown-number {
+        font-size: 2rem;
+        font-weight: bold;
+    }
+
+    @media (min-width: 768px) {
+        .countdown-number { font-size: 2.5rem; }
+    }
+
+    .countdown-label {
+        font-size: 0.8rem;
+        opacity: 0.8;
+    }
+
+    .heart {
+        color: #a71d31;
+        animation: heartbeat 1.5s infinite;
+        display: inline-block;
+        text-shadow: 0 0 10px rgba(167, 29, 49, 0.7);
+    }
+
+    @keyframes heartbeat {
+        0% { transform: scale(1); }
+        25% { transform: scale(1.1); }
+        50% { transform: scale(1); }
+        75% { transform: scale(1.1); }
+        100% { transform: scale(1); }
+    }
+
+    .message-box {
+        background: rgba(63, 13, 18, 0.2);
+        border-radius: 15px;
+        padding: 20px;
+        margin: 30px 0;
+        backdrop-filter: blur(5px);
+        transition: all 0.3s ease;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    }
+
+    @media (min-width: 768px) {
+        .message-box {
+            padding: 30px;
+            margin: 40px 0;
+        }
+    }
+
+    .message-box:hover {
+        transform: scale(1.02);
+        box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+        background: rgba(63, 13, 18, 0.3);
+    }
+
+    .quote {
+        font-style: italic;
+        font-size: 1.1rem;
+        margin: 20px 0;
+        opacity: 0;
+        animation: fadeIn 2s forwards;
+        animation-delay: 1s;
+        line-height: 1.6;
+    }
+
+    @media (min-width: 768px) {
+        .quote { font-size: 1.2rem; }
+    }
+
+    @keyframes fadeIn {
+        to { opacity: 1; }
+    }
+
+    .photo-container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+        margin: 40px 0;
+    }
+
+    @media (min-width: 768px) {
+        .photo-container {
+            flex-direction: row;
+            justify-content: center;
+        }
+    }
+
+   .heart-frame {
+    width: 200px;
+    height: 180px;
+    position: relative;
+    margin: 20px auto;
+    animation: float 4s ease-in-out infinite;
+}
+
+@media (min-width: 768px) {
+    .heart-frame {
+        width: 240px;
+        height: 220px;
+    }
+}
+
+.heart-frame:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Cpath fill='white' d='M471.701,73.365c-54.688-46.31-136.467-38.812-186.734,13.872L256,116.768l-28.967-29.531 c-50.275-52.688-132.041-60.182-186.729-13.872C7.43,112.888-6.191,175.645,16.968,231.438 c27.733,65.561,117.956,132.94,221.84,223.197c8.363,7.292,20.02,7.292,28.385,0c103.874-90.257,194.103-157.636,221.835-223.197 C518.19,175.645,504.57,112.888,471.701,73.365z'/%3E%3C/svg%3E") no-repeat center center;
+    background-size: contain;
+    filter: drop-shadow(0 0 12px rgba(255, 105, 135, 0.7));
+    z-index: 1;
+    pointer-events: none;
+}
+
+.heart-photo {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    border: 3px solid white;
+    box-shadow: 0 0 20px rgba(255, 105, 135, 0.5);
+    transition: all 0.5s ease;
+    animation: pulsePhoto 3s infinite;
+    z-index: 2;
+}
+
+@media (min-width: 768px) {
+    .heart-photo {
+        width: 220px;
+        height: 220px;
+        top: 0;
+        left: 10px;
+    }
+}
+
+
+    .floating-hearts {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    .heart-particle {
+        position: absolute;
+        opacity: 0;
+        font-size: 20px;
+        color: #a71d31;
+        animation: float-up 5s linear infinite;
+        text-shadow: 0 0 10px rgba(167, 29, 49, 0.7);
+    }
+
+    @keyframes float-up {
+        0% { transform: translateY(100vh) scale(0) rotate(0deg); opacity: 0; }
+        10% { opacity: 1; }
+        90% { opacity: 1; }
+        100% { transform: translateY(-100px) scale(1.5) rotate(360deg); opacity: 0; }
+    }
+
+    .celebration-message {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.9);
+        z-index: 100;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .celebration-content {
+        background: linear-gradient(135deg, #3a1c71, #d76d77, #ffaf7b);
+        color: white;
+        padding: 30px;
+        border-radius: 20px;
+        max-width: 90%;
+        text-align: center;
+        animation: celebrationPop 0.5s;
+        box-shadow: 0 0 40px rgba(167, 29, 49, 0.6);
+        margin: 20px;
+    }
+
+    @media (min-width: 768px) {
+        .celebration-content {
+            padding: 40px;
+            max-width: 80%;
+        }
+    }
+
+    @keyframes celebrationPop {
+        0% { transform: scale(0); opacity: 0; }
+        80% { transform: scale(1.1); opacity: 1; }
+        100% { transform: scale(1); opacity: 1; }
+    }
+
+    .signature {
+        font-family: 'Dancing Script', cursive;
+        font-size: 1.8rem;
+        margin-top: 20px;
+        color: #ff2d75;
+    }
+
+    @media (min-width: 768px) {
+        .signature { font-size: 2rem; }
+    }
+
+    .btn {
+        background: #3a1c71;
+        color: white;
+        border: none;
+        padding: 12px 25px;
+        border-radius: 50px;
+        font-weight: bold;
+        cursor: pointer;
+        margin-top: 20px;
+        transition: all 0.3s ease;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        font-size: 1rem;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        background: #a71d31;
+        color: white;
+    }
+
+    .memory {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 25px 0;
+        opacity: 0;
+        animation: slideIn 1s forwards;
+        background: rgba(63, 13, 18, 0.2);
+        padding: 20px;
+        border-radius: 15px;
+        backdrop-filter: blur(5px);
+    }
+
+    @keyframes slideIn {
+        from { transform: translateY(50px); opacity: 0; }
+        to { transform: translateY(0); opacity: 1; }
+    }
+
+    .memory:nth-child(1) { animation-delay: 0.5s; }
+    .memory:nth-child(2) { animation-delay: 1s; }
+    .memory:nth-child(3) { animation-delay: 1.5s; }
+    .memory:nth-child(4) { animation-delay: 2s; }
+
+    .kiss-animation {
+        position: fixed;
+        font-size: 30px;
+        color: #a71d31;
+        opacity: 0;
+        z-index: 10;
+        animation: flyKiss 3s linear;
+    }
+
+    @keyframes flyKiss {
+        0% { transform: translate(0, 0) scale(0.5); opacity: 0; }
+        20% { opacity: 1; }
+        100% { transform: translate(var(--end-x), var(--end-y)) scale(1.5); opacity: 0; }
+    }
+
+    .love-text {
+        font-size: 1.5rem;
+        margin: 20px 0;
+        font-family: 'Dancing Script', cursive;
+        animation: glow 2s infinite alternate;
+    }
+
+    @keyframes glow {
+        from { text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #a71d31, 0 0 20px #a71d31; }
+        to { text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #a71d31, 0 0 40px #a71d31; }
+    }
+</style>
+
+
+</head>
+
+<body>
+
+    <div class="floating-hearts" id="hearts-container"></div>
+
+    <div class="container">
+
+        <div class="photo-container">
+
+            <div class="heart-frame">
+
+                <img class="heart-photo" src="sanny.jpeg" alt="Sanny's Photo">
+
+            </div>
+
+            <div class="heart-frame">
+
+                <img class="heart-photo" src="hadia.jpeg" alt="Hadia's Photo">
+
+            </div>
+
+        </div>
+
+        <h1>Happy Birthday Hadia <span class="heart">❤</span></h1>
+
+        <h3>From your loving Sanny</h3>
+
+        <div class="love-text">Two hearts, one love</div>
+
+        <div class="countdown" id="countdown">
+
+            <div class="countdown-item">
+
+                <div class="countdown-number" id="hours">00</div>
+
+                <div class="countdown-label">Hours</div>
+
+            </div>
+
+            <div class="countdown-item">
+
+                <div class="countdown-number" id="minutes">00</div>
+
+                <div class="countdown-label">Minutes</div>
+
+            </div>
+
+            <div class="countdown-item">
+
+                <div class="countdown-number" id="seconds">00</div>
+
+                <div class="countdown-label">Seconds</div>
+
+            </div>
+
+        </div>
+
+        <div class="message-box">
+
+            <h2>My Dearest Hadia,</h2>
+
+            <p>As the clock ticks closer to your special day, my heart beats faster with excitement. This countdown marks not just the time until your birthday, but the moments until I can celebrate the most amazing person in my life.</p>
+
+            
+
+            <div class="quote">
+
+                "In all the world, there is no heart for me like yours. In all the world, there is no love for you like mine." - Maya Angelou
+
+            </div>
+
+        </div>
+
+        <div class="memory">
+
+            <h3>Our Beautiful Memories</h3>
+
+            <p>Every moment with you becomes my favorite memory. Here's to creating countless more.</p>
+
+        </div>
+
+        <div class="memory">
+
+            <h3>Your Beautiful Smile</h3>
+
+            <p>The way your eyes light up when you smile could power a thousand cities.</p>
+
+        </div>
+
+        <div class="memory">
+
+            <h3>Your Kind Heart</h3>
+
+            <p>Your compassion and kindness inspire me every day to be a better person.</p>
+
+        </div>
+
+        <div class="memory">
+
+            <h3>Our Future Together</h3>
+
+            <p>I can't wait to celebrate many more birthdays with you, my love.</p>
+
+        </div>
+
+        <button class="btn" id="surprise-btn">Click for a Special Message</button>
+
+        <button class="btn" id="kiss-btn">Send a Virtual Kiss</button>
+
+    </div>
+
+    <div class="celebration-message" id="celebration">
+
+        <div class="celebration-content">
+
+            <h2>IT'S OFFICIALLY YOUR BIRTHDAY HADIA! <span class="heart">❤</span></h2>
+
+            <p>Happy birthday to the most beautiful, kind, and amazing woman in my life! Today marks another year of your incredible existence, and I'm so grateful to be part of your journey.</p>
+
+            <p>May this year bring you all the happiness, success, and love you deserve. I promise to be by your side through it all.</p>
+
+            <div class="signature">Forever yours,<br>Sanny</div>
+
+            <button class="btn" id="close-celebration">Close</button>
+
+        </div>
+
+    </div>
+
+    <script>
+
+        // Countdown to birthday
+
+        function updateCountdown() {
+
+            const now = new Date();
+
+            const tomorrow = new Date();
+
+            tomorrow.setDate(now.getDate() + 1);
+
+            tomorrow.setHours(0, 0, 0, 0);
+
+            
+
+            const diff = tomorrow - now;
+
+            
+
+            const hours = Math.floor(diff / (1000 * 60 * 60));
+
+            const minutes = Math.floor((diff % (1000 * 60 * 60)) / (1000 * 60));
+
+            const seconds = Math.floor((diff % (1000 * 60)) / 1000);
+
+            
+
+            document.getElementById('hours').textContent = hours.toString().padStart(2, '0');
+
+            document.getElementById('minutes').textContent = minutes.toString().padStart(2, '0');
+
+            document.getElementById('seconds').textContent = seconds.toString().padStart(2, '0');
+
+            
+
+            // Check if it's midnight
+
+            if (hours === 0 && minutes === 0 && seconds === 0) {
+
+                showCelebration();
+
+            }
+
+        }
+
+        
+
+        setInterval(updateCountdown, 1000);
+
+        updateCountdown();
+
+        
+
+        // Create floating hearts
+
+        function createHearts() {
+
+            const container = document.getElementById('hearts-container');
+
+            const heart = document.createElement('div');
+
+            heart.className = 'heart-particle';
+
+            heart.innerHTML = '❤';
+
+            heart.style.left = Math.random() * 100 + 'vw';
+
+            heart.style.animationDuration = 3 + Math.random() * 7 + 's';
+
+            heart.style.fontSize = 10 + Math.random() * 30 + 'px';
+
+            heart.style.animationDelay = Math.random() * 5 + 's';
+
+            container.appendChild(heart);
+
+            
+
+            setTimeout(() => {
+
+                heart.remove();
+
+            }, 10000);
+
+        }
+
+        
+
+        setInterval(createHearts, 300);
+
+        
+
+        // Celebration message
+
+        function showCelebration() {
+
+            document.getElementById('celebration').style.display = 'flex';
+
+            // Create fireworks effect
+
+            for (let i = 0; i < 100; i++) {
+
+                setTimeout(() => {
+
+                    createHearts();
+
+                }, i * 50);
+
+            }
+
+            
+
+            // Play celebration sound if available
+
+            try {
+
+                const audio = new Audio('https://assets.mixkit.co/sfx/preview/mixkit-happy-birthday-balloons-in-the-sky-3120.mp3');
+
+                audio.play();
+
+            } catch (e) {
+
+                console.log("Couldn't play audio");
+
+            }
+
+        }
+
+        
+
+        document.getElementById('surprise-btn').addEventListener('click', showCelebration);
+
+        document.getElementById('close-celebration').addEventListener('click', () => {
+
+            document.getElementById('celebration').style.display = 'none';
+
+        });
+
+        
+
+        // Romantic quotes array
+
+        const quotes = [
+
+            "I love you not only for what you are, but for what I am when I am with you.",
+
+            "You're my today and all of my tomorrows.",
+
+            "In your smile, I see something more beautiful than the stars.",
+
+            "I saw that you were perfect, and so I loved you. Then I saw that you were not perfect and I loved you even more.",
+
+            "If I had to choose between loving you and breathing, I would use my last breath to say 'I love you'.",
+
+            "You are my sun, my moon, and all my stars.",
+
+            "I love you more than yesterday but less than tomorrow.",
+
+            "All of me loves all of you.",
+
+            "Your love is all I need to feel complete.",
+
+            "Every love story is beautiful, but ours is my favorite."
+
+        ];
+
+        
+
+        // Rotate quotes
+
+        function rotateQuotes() {
+
+            const quoteElement = document.querySelector('.quote');
+
+            let currentIndex = 0;
+
+            
+
+            setInterval(() => {
+
+                quoteElement.style.animation = 'none';
+
+                void quoteElement.offsetWidth; // Trigger reflow
+
+                quoteElement.style.animation = 'fadeIn 2s forwards';
+
+                
+
+                currentIndex = (currentIndex + 1) % quotes.length;
+
+                quoteElement.textContent = quotes[currentIndex];
+
+            }, 8000);
+
+        }
+
+        
+
+        rotateQuotes();
+
+        
+
+        // Virtual kiss animation
+
+        document.getElementById('kiss-btn').addEventListener('click', () => {
+
+            const kiss = document.createElement('div');
+
+            kiss.className = 'kiss-animation';
+
+            kiss.innerHTML = '💋';
+
+            
+
+            // Random start position at bottom
+
+            const startX = Math.random() * window.innerWidth;
+
+            kiss.style.left = startX + 'px';
+
+            kiss.style.bottom = '0px';
+
+            
+
+            // Random end position at top
+
+            const endX = (Math.random() - 0.5) * 200;
+
+            const endY = -Math.random() * 200 - 100;
+
+            
+
+            kiss.style.setProperty('--end-x', endX + 'px');
+
+            kiss.style.setProperty('--end-y', endY + 'px');
+
+            
+
+            document.body.appendChild(kiss);
+
+            
+
+            setTimeout(() => {
+
+                kiss.remove();
+
+            }, 3000);
+
+        });
+
+        
+
+       // Make heart photos interactive
+
+        const heartPhotos = document.querySelectorAll('.heart-photo');
+
+        heartPhotos.forEach(photo => {
+
+            photo.addEventListener('click', () => {
+
+                photo.style.transform = 'scale(1.1)';
+
+                photo.style.boxShadow = '0 0 40px rgba(255, 45, 117, 0.9)';
+
+                setTimeout(() => {
+
+                    photo.style.transform = 'scale(1)';
+
+                    photo.style.boxShadow = '0 0 20px rgba(255, 45, 117, 0.5)';
+
+                }, 1000);
+
+                
+
+                // Create burst of hearts
+
+                for (let i = 0; i < 10; i++) {
+
+                    setTimeout(() => {
+
+                        const heart = document.createElement('div');
+
+                        heart.className = 'heart-particle';
+
+                        heart.innerHTML = '❤';
+
+                        heart.style.left = (photo.getBoundingClientRect().left + photo.width/2) + 'px';
+
+                        heart.style.top = (photo.getBoundingClientRect().top + photo.height/2) + 'px';
+
+                        heart.style.animationDuration = 2 + Math.random() * 3 + 's';
+
+                        heart.style.fontSize = 15 + Math.random() * 25 + 'px';
+
+                        document.getElementById('hearts-container').appendChild(heart);
+
+                        
+
+                        setTimeout(() => {
+
+                            heart.remove();
+
+                        }, 5000);
+
+                    }, i * 100);
+
+                }
+
+            });
+
+        });
+
+    </script>
+
+</body>
+
+</html>    
